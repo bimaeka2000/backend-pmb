@@ -1,0 +1,31 @@
+ <fieldset>
+        <legend>Pendidikan Asal</legend>
+        <label>Nama Sekolah:</label>
+        <input type="text" name="nama_sekolah" required>
+
+        <label>Jenjang:</label>
+        <select name="jenjang" id="jenjang" required>
+          <option value="">-- Pilih --</option>
+          <option value="sma">SMA</option>
+          <option value="smk">SMK</option>
+          <option value="ma">MA</option>
+        </select>
+
+           <label>Jurusan:</label>
+      <select name="jurusan" id="jurusan" required>
+      
+        </select>
+
+        <label>Tahun Lulus:</label>
+        <!-- buat otomatis logic untuk maksimal daftar kuliah 
+         dikurang 5 tahun dari waktu berjalan sekarang 
+         type combobox
+         -->
+        <input type="number" name="tahun_lulus" min="2020" max="2025">
+
+        <label>Nomor Ijazah:</label>
+        <input type="text" name="nomor_ijazah">
+
+        <label>Nilai Rata-rata:</label>
+        <input type="text" name="nilai_rata_rata">
+      </fieldset>

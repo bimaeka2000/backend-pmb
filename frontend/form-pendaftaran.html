@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="aset/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Formulir Penerimaan Mahasiswa Baru (PMB)</h2>
+    <form id="form-pendaftaran" method="POST" enctype="multipart/form-data">
+      
+      <!-- Data Pribadi -->
+      <fieldset>
+        <legend>Data Pribadi</legend>
+        <label>NISN:</label>
+        <input type="text" name="nisn" id="nisn" required>
+
+        <label>NIK:</label>
+        <input type="text" name="nik" id="nik" required>
+
+        <label>Nama Lengkap:</label>
+        <input type="text" name="nama_lengkap" id="nama_lengkap" required>
+
+        <label>Tempat Lahir:</label>
+        <input type="text" name="tempat_lahir" id="tempat_lahir" required>
+
+        <label>Tanggal Lahir:</label>
+        <input type="date" name="tanggal_lahir" id="tanggal_lahir" required>
+
+        <label>Jenis Kelamin:</label>
+        <select name="jenis_kelamin" id="jenis_kelamin" required>
+          <option value="">-- Pilih --</option>
+          <option value="L">Laki-Laki</option>
+          <option value="P">Perempuan</option>
+        </select>
+
+        <label>Agama:</label>
+         <select name="agama" id="agama" required>
+          <option value="">-- Pilih --</option>
+          <option value="islam">Islam</option>
+          <option value="kristen">Kristen</option>
+          <option value="hindu">Hindu</option>
+          <option value="katolik">Katolik</option>
+        </select>
+
+        <label>Alamat:</label>
+        <input name="alamat"  id="alamat"></input>
+        
+        <label>Provinsi:</label>
+        <select id="provinsi" name="provinsi">
+          <option value="">-- Pilih Provinsi --</option>
+        </select>
+
+       <label for="kabupaten">Kabupaten/Kota:</label>
+        <select id="kabupaten" name="kabupaten"disabled>
+          <option  value="">Pilih provinsi dulu</option>
+        </select>
+
+         <label for="kecamatan">Kecamatan:</label>
+          <select id="kecamatan" name=kecamatan  disabled >
+            <option value="">Pilih provinsi dulu</option>
+          </select>
+      
+          
+         <label for="kelurahan">Kelurahan:</label>
+          <select id="kelurahan" name="kelurahan" disabled>
+            <option value="">Pilih provinsi dulu</option>
+          </select>
+
+        <label>Kode Pos:</label>
+        <input name="kode_pos" id="kode_pos" ></input>
+
+        <label>No. HP:</label>
+        <input type="text" name="nomor_hp" id="nomor_hp" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label>Pas Foto maks 1mb jpeg,jpg,png:</label>
+        <input type="text" name="pas_foto" id="pas_foto">
+      </fieldset>
+
+      <!-- Pendidikan Asal -->
+
+      <!-- Data Orang Tua -->
+
+      <!-- Pilihan Prodi -->
+
+      <!-- Berkas -->
+    
+      <!-- Pembayaran -->
+
+      <button type="submit">Kirim Pendaftaran</button>
+    </form>
+  </div>
+  <script>
+
+    const jurusanSMK = `
+      <optgroup label="Teknologi dan Rekayasa">
+        <option value="TKRO">Teknik Kendaraan Ringan Otomotif (TKRO)</option>
+        <option value="TBSM">Teknik dan Bisnis Sepeda Motor (TBSM)</option>
+        <option value="TKJ">Teknik Komputer dan Jaringan (TKJ)</option>
+        <option value="RPL">Rekayasa Perangkat Lunak (RPL)</option>
+        <option value="MM">Multimedia (MM) / DKV</option>
+        <option value="ELIN">Teknik Elektronika Industri</option>
+        <option value="Listrik">Teknik Listrik / Instalasi Tenaga Listrik</option>
+        <option value="Mesin">Teknik Mesin</option>
+        <option value="Konstruksi">Teknik Konstruksi dan Properti</option>
+      </optgroup>
+      <optgroup label="Kesehatan dan Pekerjaan Sosial">
+        <option value="Keperawatan">Asisten Keperawatan</option>
+        <option value="Farmasi">Farmasi Klinis dan Komunitas</option>
+        <option value="LabMedik">Teknologi Laboratorium Medik</option>
+        <option value="Caregiver">Caregiver (Perawatan Sosial)</option>
+      </optgroup>
+      <optgroup label="Pariwisata">
+        <option value="Perhotelan">Perhotelan</option>
+        <option value="TataBoga">Tata Boga</option>
+        <option value="TataBusana">Tata Busana</option>
+        <option value="UPW">Usaha Perjalanan Wisata (UPW)</option>
+        <option value="Kecantikan">Kecantikan Kulit dan Rambut</option>
+      </optgroup>
+      <optgroup label="Bisnis dan Manajemen">
+        <option value="AKL">Akuntansi dan Keuangan Lembaga (AKL)</option>
+        <option value="OTKP">Otomatisasi dan Tata Kelola Perkantoran (OTKP)</option>
+        <option value="BDP">Bisnis Daring dan Pemasaran (BDP)</option>
+        <option value="Manajemen">Manajemen Perkantoran</option>
+      </optgroup>
+      <optgroup label="Seni dan Industri Kreatif">
+        <option value="Musik">Seni Musik</option>
+        <option value="Tari">Seni Tari</option>
+        <option value="Rupa">Seni Rupa</option>
+        <option value="Broadcasting">Broadcasting</option>
+        <option value="Animasi">Animasi</option>
+      </optgroup>
+    `;
+
+    const jurusanSMA = `
+      <option value="IPA">IPA (Ilmu Pengetahuan Alam)</option>
+      <option value="IPS">IPS (Ilmu Pengetahuan Sosial)</option>
+      <option value="Bahasa">Bahasa dan Budaya</option>
+    `;
+
+    const jurusanMA = `
+      <option value="Agama">Agama</option>
+      <option value="IPA">IPA (Ilmu Pengetahuan Alam)</option>
+      <option value="IPS">IPS (Ilmu Pengetahuan Sosial)</option>
+      <option value="Bahasa">Bahasa</option>
+    `;
+
+    const jenjangSelect = document.getElementById('jenjang');
+    const jurusanSelect = document.getElementById('jurusan');
+
+    jenjangSelect.addEventListener('change', function() {
+      let value = this.value;
+      jurusanSelect.innerHTML = '<option value="">-- Pilih Jurusan --</option>'; // reset isi
+
+      if (value === "smk") {
+        jurusanSelect.insertAdjacentHTML("beforeend", jurusanSMK);
+      } else if (value === "sma") {
+        jurusanSelect.insertAdjacentHTML("beforeend", jurusanSMA);
+      } else if (value === "ma") {
+        jurusanSelect.insertAdjacentHTML("beforeend", jurusanMA);
+      }
+    });
+  
+  </script>
+
+  
+  <script type="module" src="/api/api_wilayah.js"></script>
+  <script type="module" src="/api/calon_mahasiswa_baru/tambah_calon_mahasiswa_baru.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+</body>
+</html>
