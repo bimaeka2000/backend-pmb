@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="aset/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Data Orang Tua -->
+ <div class="container">
+ <form method="POST" id="form-data-orangtua">
+  <fieldset>
+        <legend>Data Orang Tua / Wali</legend>
+        <h4>Ayah</h4>
+        <label>Nama Lengkap Ayah:</label>
+        <input type="text" name="nama_lengkap_ayah" id="nama_lengkap_ayah">
+        <label>Kondisi:</label>
+        <input type="text" name="kondisi" id="kondisi">
+        <!-- type data combo box
+          if kondisi meninggal next ke pengisian data ibu
+          else kondisi hidup lanjut isi data 
+        -->
+        <label>Pendidikan Terakhir Ayah:</label>
+        <input type="text" name="pendidikan_terakhir_ayah" id="pendidikan_terakhir_ayah" >
+         <!-- type data combo box -->
+        <label>Pekerjaan Ayah:</label>
+        <input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah">
+        <!-- type data combo box -->
+        <label>Penghasilan Ayah:</label>
+        <input type="number" name="penghasilan_ayah" id="penghasilan_ayah">
+
+        <h4>Ibu</h4>
+        <label>Nama Ibu:</label>
+        <input type="text" name="nama_lengkap_ibu" id="nama_lengkap_ibu">
+        <label>Pendidikan Terakhir Ibu:</label>
+        <input type="text" name="pendidikan_terakhir_ibu" id="pendidikan_terakhir_ibu">
+        <label>Pekerjaan Ibu:</label>
+        <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu">
+        <label>Penghasilan Ibu:</label>
+        <input type="number" name="penghasilan_ibu" id="penghasilan_ibu">
+
+        <label>Nomor HP Orang Tua:</label>
+        <input type="text" name="nomor_hp_orangtua" id="nomor_hp_orangtua">
+          <label>Alamat Orang Tua:</label>
+        <input type="text" name="alamat_orangtua" id="alamat_orangtua">
+        <!-- <h4>Wali (Opsional)</h4>
+        <label>Nama Wali:</label>
+        <input type="text" name="nama_wali">
+        <label>Pekerjaan Wali:</label>
+        <input type="text" name="pekerjaan_wali">
+      </fieldset> -->
+<button type="submit">Submit</button>
+
+ </form>
+ </div>
+
+  <script type="module" src="../api/calon_mahasiswa_baru/tambah_data_orangtua_calon_mahasiswa_baru.js"></script>
+
+    </body>

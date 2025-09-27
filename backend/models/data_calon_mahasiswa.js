@@ -1,7 +1,12 @@
-import {DataTypes} from 'sequelize';
+import {Sequelize,DataTypes} from 'sequelize';
 import sequelize from '../db.js';
 
 const DataCalonMahasiswaBaru = sequelize.define('data_calon_mahasiswa',{
+  id:{
+    type: DataTypes.INTEGER,
+    primaryKey:true,
+    autoIncrement:true,
+  },
   nama_lengkap: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -15,7 +20,7 @@ const DataCalonMahasiswaBaru = sequelize.define('data_calon_mahasiswa',{
     allowNull: false,
   },
   tanggal_lahir:{
-    type:DataTypes.STRING,
+    type:DataTypes.DATEONLY,
     allowNull:false
   },
   jenis_kelamin: {
@@ -57,6 +62,8 @@ const DataCalonMahasiswaBaru = sequelize.define('data_calon_mahasiswa',{
   email:{
     type:DataTypes.STRING,
     allowNull:false,
+    unique:true,
+    validate:{isEmail:true}
   },
   pas_foto:{
     type:DataTypes.STRING,
@@ -68,7 +75,8 @@ const DataCalonMahasiswaBaru = sequelize.define('data_calon_mahasiswa',{
   }
 },
   {
-    timestamps:false // enables timestamps);
+    timestamps:false, // enables timestamps);
+    freezeTableName: true // <--- penting
   });
 
 export default DataCalonMahasiswaBaru
