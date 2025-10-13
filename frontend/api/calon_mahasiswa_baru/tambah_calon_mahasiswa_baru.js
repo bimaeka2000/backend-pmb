@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/pendaftaran/daftar";
+let url = "pendaftaran/daftar";
 
 document.getElementById("form-pendaftaran").addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -50,8 +50,8 @@ document.getElementById("form-pendaftaran").addEventListener("submit", async fun
         alert("Data berhasil dikirim!");
 
         // Reset the form after successful submission
-         document.getElementById("form-pendaftaran").reset();
-
+        document.getElementById("form-pendaftaran").reset();
+        // #TODO buat link untuk ke arah page selanjutnya setelah submit
     } catch (error) {
         console.error("Error fetch:", error);
         alert("Gagal mengirim data, cek koneksi atau server.");

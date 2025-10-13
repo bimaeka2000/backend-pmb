@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 router.get('/', function(req, res) {
-res.sendFile(path.join(__dirname, "..","..", "frontend", "login.html"));
+res.sendFile(path.join(__dirname,"..", "..", "frontend", "page", "authentication", "login.html"));
 });
 
 router.post('/auth', async function (req,res)  {

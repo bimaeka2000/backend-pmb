@@ -1,4 +1,5 @@
 let url = 'http://localhost:3000/login/auth';
+let urlDashboard = "http://localhost:3000/dashboard"
 
 document.getElementById("form-login").addEventListener("submit",
   async function(event) {
@@ -27,7 +28,7 @@ document.getElementById("form-login").addEventListener("submit",
               .then((data) => {
                 console.log("masuk halaman admin")
                 console.log(data)
-                    location.assign("../dashboard.html")
+                    window.location.href = urlDashboard;
               })
               .catch(err => {
                 console.log(err)

@@ -1,22 +1,35 @@
         body {
             box-sizing: border-box;
         }
+
         .page-content {
             display: none;
         }
+
         .page-content.active {
             display: block;
         }
+
         .fade-in {
             animation: fadeIn 0.3s ease-in;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .sidebar-item:hover {
             background-color: rgba(99, 102, 241, 0.1);
         }
+
         .sidebar-item.active {
             background-color: rgba(99, 102, 241, 0.1);
             border-right: 3px solid #6366f1;
