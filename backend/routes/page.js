@@ -10,7 +10,8 @@ import { fileURLToPath } from 'url';
 
 const pages = {
   "/": "index.html",
-  "/info-pendaftaran": path.join("home", "infopendaftaran.html"),
+  "/pendaftaran": path.join("home", "infopendaftaran.html"),
+  "/akreditasi": path.join("home", "akreditasi.html"),
   "/biaya-kuliah": path.join("home", "biayakuliah.html"),
   "/faq": path.join("home", "faq.html"),
   "/sarana": path.join("home", "sarana.html"),
