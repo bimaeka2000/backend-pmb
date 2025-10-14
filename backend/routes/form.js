@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 const router = express.Router();
 
 const pages = {
-  "/pendaftaran": path.join("forms", "form-pendaftaran.html"),
+  "/daftar": path.join("forms", "formAlur.html"),
   "/form-pendidikan": path.join("forms", "form-pendidikan.html"),
   "/form-prodi": path.join("forms", "form-pilihan-prodi.html"),
   "/form-berkas": path.join("forms", "form-berkas.html"),

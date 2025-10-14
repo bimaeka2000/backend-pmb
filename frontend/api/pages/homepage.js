@@ -1,5 +1,6 @@
-let urlInfoPendaftaran = "/info-pendaftaran"
 let urlIndex = "/"
+let urlInfoPendaftaran = "/pendaftaran"
+let urlAkreditasi = "/akreditasi"
 let urlBiayaKuliah = "/biaya-kuliah"
 let urlFaq = "/faq"
 let urlSarana = "/sarana"
@@ -7,13 +8,19 @@ let urlKegiatanMahasiswa = "/kegiatan-mahasiswa"
 
 
 // ke halaman Info Pendaftaran
-document.getElementById("pendaftaran").addEventListener("click", function () {
-    window.location.href = urlInfoPendaftaran;
-});
 
 // ke halaman Index
 document.getElementById("index").addEventListener("click", function () {
     window.location.href = urlIndex;
+});
+
+document.getElementById("pendaftaran").addEventListener("click", function () {
+    window.location.href = urlInfoPendaftaran;
+});
+
+// ke halaman Akreditasi
+document.getElementById("akreditasi").addEventListener("click", function () {
+    window.location.href = urlAkreditasi;
 });
 
 // ke halaman Biaya Kuliah
