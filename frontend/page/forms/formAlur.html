@@ -81,8 +81,8 @@
       </div>
     </div>
 
-    <div class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex items-center justify-center py-20">
-      <div class="w-full max-w-3xl bg-white shadow-lg rounded-2xl p-8">
+    <div class="min-h-screen flex items-center justify-center py-20 bg-[url('../aset/background/bg.png')] ">
+      <div class="w-full max-w-3xl bg-white shadow- rounded-2xl p-8">
         <h1 class="text-3xl font-bold text-blue-600 text-center mb-6">
           Formulir Pendaftaran Mahasiswa Baru
         </h1>
@@ -416,7 +416,7 @@
 
           <!-- STEP 2 -->
           <div class="step" id="step-2">
-            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">
+            <h3 class="text-2xl font-semibold text-blue-700 border-b pb-2 mb-4 text-center ">
               Data Orang Tua / Wali
             </h3>
 
@@ -660,10 +660,7 @@
 
           <!-- STEP 3: Pendidikan Asal -->
           <div class="step hidden" id="step3">
-            <div
-              class="w-full max-w-2xl bg-white shadow-lg rounded-2xl p-8 mx-auto"
-            >
-              <h2 class="text-xl font-bold text-blue-700 mb-6 text-center">
+              <h2 class="text-2xl font-semibold text-blue-700 border-b pb-2 mb-4 text-center">
                 Pendidikan Asal
               </h2>
 
@@ -779,7 +776,7 @@
                   Selanjutnya➡️
                 </button>
               </div>
-            </div>
+            
 
             <!-- Script khusus step 3 -->
             <script>
@@ -873,13 +870,13 @@
 
           <!-- STEP 4 -->
           <div class="step hidden" id="step4">
-            <div class="w-full max-w-2xl bg-white shadow-lg rounded-2xl p-8">
-              <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">
+
+              <h2 class="text-2xl font-semibold text-blue-700 border-b pb-2 mb-4 text-center">
                 Pilihan Program Studi
               </h2>
 
               <form id="form-pilihan-prodi" method="POST" class="space-y-5">
-                <fieldset class="border border-gray-300 rounded-xl p-6">
+                
                   <legend class="px-3 text-lg font-semibold text-blue-600">
                     Program Studi
                   </legend>
@@ -932,7 +929,7 @@
                       <option value="Prestasi">Prestasi</option>
                     </select>
                   </div>
-                </fieldset>
+                
 
                 <!-- Navigasi Step -->
                 <div class="flex justify-between mt-6">
@@ -952,7 +949,7 @@
                   </button>
                 </div>
               </form>
-            </div>
+            
           </div>
 
           <!-- STEP 5 -->
@@ -1026,5 +1023,6 @@
     </script>
     <script src="../api/pages/homepage.js"></script>
     <script src="../api/pages/form.js"></script>
+    <script src="../../api/api_wilayah.js"></script>
   </body>
 </html>

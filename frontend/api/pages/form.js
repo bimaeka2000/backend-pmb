@@ -12,6 +12,9 @@ let urlDataProdiCalonMahasiswa = "/form/form-prodi"
 document.getElementById("daftar").addEventListener("click", function () {
     window.location.href = urlDaftar;
 });
+document.getElementById("daftar2").addEventListener("click", function () {
+    window.location.href = urlDaftar;
+});
 
 // // Data Berkas
 // document.getElementById("form-berkas").addEventListener("click", function () {
